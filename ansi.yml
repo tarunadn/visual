@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install Epel Release
+      yum: name=epel-release state=latest
+    - name: Install ansible
+      yum: name=ansible state=latest
